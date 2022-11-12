@@ -1,0 +1,20 @@
+{
+  "name": "tpfinalpoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "testpush": "git add . && git commit -m 'test' && git push && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delfinalasheras/TPFINALPOO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Delfinalasheras/TPFINALPOO/issues"
+  },
+  "homepage": "https://github.com/Delfinalasheras/TPFINALPOO#readme"
+}
