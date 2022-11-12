@@ -8,7 +8,7 @@ test("tablero vacio",()=>{
 test("insertar paquete",()=>{
     const tablero=new Tablero();
     tablero.insertarPaquete();
-    expect(tablero[0]).toBe(1);
+    expect(tablero.linea[0]).toBe(1);
 })
 
 

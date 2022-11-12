@@ -1,7 +1,7 @@
 function Tablero(){
     this.estado="vacio";
     this.linea=new Array(4);
-    this.insertarPaquete(){
+    this.insertarPaquete=function(){
         var i;
         for(i=0;i<4;i++){
             if(this.linea[i]==null){
