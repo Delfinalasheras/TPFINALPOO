@@ -10,5 +10,13 @@ test("insertar paquete",()=>{
     tablero.insertarPaquete();
     expect(tablero.linea[0]).toBe(1);
 })
+test("insertar otro Paquete",()=>{
+    const tablero=new Tablero();
+    tablero.insertarPaquete();
+    tablero.insertarPaquete();
+    expect(tablero.linea[0]).toBe(2);
+    expect(tablero.linea[0]).toBe(1);
 
+
+})
 
