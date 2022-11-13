@@ -1,3 +1,5 @@
+const Local = require("./Local");
+
 function Local(nombre){
     this.capacidad=5;
     this.paquetesLocal=Array(5);
@@ -5,7 +7,7 @@ function Local(nombre){
     this.insertarPaquete=function(cantidad){
         if (cantidad<5){
             for(var i=0;i<cantidad;i++){
-                this.paquetesLocal[i]=i;
+                this.paquetesLocal[i]=new Paquete();
             }
         }
         else{
