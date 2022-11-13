@@ -1,4 +1,4 @@
-
+const Local = require("../src/Local");
 const Tablero= require('../src/tablero');
 test("tablero vacio",()=>{
     const tablero=new Tablero();
@@ -6,16 +6,16 @@ test("tablero vacio",()=>{
 
 })
 test("insertar paquete",()=>{
-    const tablero=new Tablero();
-    tablero.insertarPaquete();
-    expect(tablero.linea[0]).toBe(1);
+    const local=new Local("A");
+    local.insertarPaqute(3);
+    expect(local.paquetesLocal[0]).toBe(0);
+    expect(local.paquetesLocal[1]).toBe(1);
+    expect(local.paquetesLocal[2]).toBe(2);
+
+
 })
 test("insertar otro Paquete",()=>{
-    const tablero=new Tablero();
-    tablero.insertarPaquete();
-    tablero.insertarPaquete();
-    expect(tablero.linea[0]).toBe(2);
-    expect(tablero.linea[1]).toBe(1);
+    
 
 
 })

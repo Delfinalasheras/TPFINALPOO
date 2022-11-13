@@ -1,15 +1,8 @@
+const Local = require("./Local");
 function Tablero(){
     this.estado="vacio";
-    this.linea=new Array(4);
-    this.insertarPaquete=function(){
-        var i;
-        for(i=0;i<4;i++){
-            if(this.linea[i]==null){
-                this.linea[i]=1;
-                break;
+    this.local=new Local("A");
 
-            }
-        }
-    }
+    
 }
 module.exports=Tablero;
