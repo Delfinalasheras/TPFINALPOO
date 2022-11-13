@@ -1,8 +1,13 @@
 const Local = require("./Local");
 function Tablero(){
-    this.estado="vacio";
-    //this.local=new Local("A");
-    //this.local.insertarPaquete(3);
+    this.estado=[];
+    this.insertarPaquetes=function(nombreLocal,cantidad){
+        const local=new Local(nombreLocal);
+        local.insertarPaquete(cantidad);
+        this.estado[0]=local.paquetesLocal;
+
+    }
+
 
 
     
