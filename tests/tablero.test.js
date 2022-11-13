@@ -7,10 +7,10 @@ test("tablero vacio",()=>{
 })
 test("insertar paquete",()=>{
     const local=new Local("A");
-    local.insertarPaquete(3);
-    expect(local.paquetesLocal[0]).toBe(0);
-    expect(local.paquetesLocal[1]).toBe(1);
-    expect(local.paquetesLocal[2]).toBe(2);
+    local.insertarPaquete(5);
+    expect(local.paquetesLocal[0]).toBe(paquete);
+    expect(local.paquetesLocal[1]).toBe(paquete);
+    expect(local.paquetesLocal[2]).toBe(paquete);
 
 
 })
