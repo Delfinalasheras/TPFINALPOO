@@ -1,6 +1,6 @@
 function Paquete(){
-    this.getpaquete=function(){
-        return Paquete;
+    this.getPaquete=function(){
+        return "Paquete";
     }
 }
 module.exports=Paquete;
