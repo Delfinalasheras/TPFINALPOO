@@ -1,5 +1,5 @@
 const Local = require("./Local");
-
+const Paquete= require('./Paquete');
 function Local(nombre){
     this.capacidad=5;
     this.paquetesLocal=Array(5);

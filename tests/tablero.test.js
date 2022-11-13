@@ -1,6 +1,6 @@
 const Local = require("../src/Local");
 const Tablero= require('../src/tablero');
-const Paquete= require('../src/Paquete');
+
 
 test("tablero vacio",()=>{
     const tablero=new Tablero();
