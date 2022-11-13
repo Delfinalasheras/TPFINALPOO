@@ -4,7 +4,7 @@ const Paquete= require('../src/Paquete');
 
 test("insertar paquete en local",()=>{
     const tablero=new Tablero();
-    tablero.insertarPaquetes(3);
+    tablero.crearTablero("A",3);
     expect(tablero.estado[0][0].getPaquete()).toBe("Paquete");
     expect(tablero.estado[0][1].getPaquete()).toBe("Paquete");
     expect(tablero.estado[0][2].getPaquete()).toBe("Paquete");
