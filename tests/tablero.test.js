@@ -1,5 +1,5 @@
 const Local = require("../src/Local");
-const Tablero= require('../src/tablero');
+//const Tablero= require('../src/tablero');
 const Paquete= require('../src/Paquete');
 
 test("insertar paquete en local",()=>{
@@ -13,6 +13,7 @@ test("insertar paquete en local",()=>{
 })
 test("Mover Paquetes",()=>{
     const tablero=new Tablero();
+    tablero.crearTablero("A",3);
     
     
     
