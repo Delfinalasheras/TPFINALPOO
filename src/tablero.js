@@ -15,7 +15,7 @@ function Tablero(){
         this.estado[1]= Array(Facturacion.maximoPaquetes);
         this.estado[3]= Array(Calidad.maximoPaquetes);
         this.estado[4]= Array(Distribucion.maximoPaquetes);
-        this.estado[4][0]=new Paquete();
+        //this.estado[4][0]=new Paquete();
 
     }
     this.moverPaquete=function(){
