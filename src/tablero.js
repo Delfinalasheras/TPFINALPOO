@@ -40,10 +40,12 @@ function Tablero(){
         var paquete=new Paquete();
         const maximo=arreglo2.length;
         const cantPaquetes=this.cantidadAnterior(arreglo1);
-        for(var i=0;i<maximo && i<cantPaquetes;i++){
+        for(var i=0;i<maximo;i++){
+            if(arreglo1[i]!=undefined){
+                paquete=arreglo1[i];
+                arreglo2[i]=paquete;
+            }
             
-            paquete=arreglo1[i];
-            arreglo2[i]=paquete;
             
             
         }
