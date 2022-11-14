@@ -21,7 +21,7 @@ function Tablero(){
     this.moverPaquete=function(){
         var col ,centro;
         for(col=1;col<4;col++){
-            for(centro=0;centro<this.estado[col].maximoPaquetes;col++){
+            for(centro=0;centro<this.estado[col].lenght;col++){
                 this.cambiarPosiciones(this.estado[col-1],this.estado[col]);
                 
             }
