@@ -1,6 +1,6 @@
 const Local = require("./Local");
 
-const Facturacion = require("../centros/Facturacion");
+const Facturacion = require("/Users/delfilh/Desktop/TPFINALPOO/src/centros/Facturacion.js");
 const Calidad = require("../centros/Calidad");
 const Distribucion = require("../centros/Distribucion");
 const Paquete = require("./Paquete");
