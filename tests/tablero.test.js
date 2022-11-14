@@ -21,7 +21,7 @@ test("Armar Tablero",()=>{
 test("Mover Paquetes",()=>{
     const tablero=new Tablero();
     tablero.crearTablero("A",3);
-    this.moverPaquete();
+    tablero.moverPaquete();
     expect(tablero.estado[1][0].getPaquete()).toBe("Paquete");
     
     
