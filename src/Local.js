@@ -7,8 +7,7 @@ function Local(nombre){
     this.insertarPaquete=function(cantidad){
         if (cantidad<5){
             for(var i=0;i<cantidad;i++){
-                this.paquete=new Paquete()
-                this.paquetesLocal[i].push(this.paquete);
+                this.paquetesLocal[i]=new Paquete();
             }
         }
         else{
