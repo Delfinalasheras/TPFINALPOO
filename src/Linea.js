@@ -70,17 +70,15 @@ function Linea(nombreLocal,cantidad,nombreDestino){
 
         //const cantPaquetes=this.cantidadAnterior(arreglo1);
         for(var i=maximo-1;i>=0;i--){
-            if(arreglo1[i]!=undefined){
-                paquete=arreglo1[i];
-                
-                arreglo2.push(paquete);
-                paquete.aumentarTiempo();
-                arreglo1.pop(paquete);
+            paquete=arreglo1[i];
+            arreglo2.push(paquete);
+            paquete.aumentarTiempo();
+            arreglo1.pop();
                 //console.log("paquete %d %d",i,paquete.tiempo);
             }
             
         }
-    }
+    
 
 
     
