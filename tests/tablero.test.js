@@ -15,7 +15,7 @@ test("Armar Tablero",()=>{
     const tablero=new Tablero();
     tablero.crearTablero("A",3);
     tablero.estado[1][0]=new Paquete();
-    expect(tablero.estado[4][0].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[1][0].getPaquete()).toBe("Paquete");
     
 })
 test("Mover Paquetes",()=>{
