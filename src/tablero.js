@@ -6,6 +6,8 @@ const Distribucion = require("./centros/Distribucion");
 const Paquete = require("./Paquete");
 function Tablero(){
     this.estado=[];
+
+    ///creo tablero por cada columna tiene su proprio arrray
     this.crearTablero=function(nombreLocal,cantidad){
         const local=new Local(nombreLocal);
         local.insertarPaquete(cantidad);
@@ -19,10 +21,7 @@ function Tablero(){
         var col ,centro;
         for(col=1;col<4;col++){
             for(centro=0;centro<this.estado[col].lenght;col++){
-                if(this.cantidadAnterior(this.estado[col-1])<this.estado[col].lenght){
-
-
-                }
+                this.cambiarPosiciones(this.estado[col-1],this.estado[col]);
                 
             }
         }
@@ -36,13 +35,13 @@ function Tablero(){
         }
     }
     this.cambiarPosiciones=function(arreglo1,arreglo2){
-        var Paquete;
+        var paquete=new Paquete();
         const maximo=arreglo2.lenght;
         for(var i=0;i<maximo;i++){
-            for(var j=0;j<maximo;j++){
-                arreglo1[i].push
-                arreglo1[i]
-            }
+            paquete=arreglo1[i];
+            arreglo1.pop();
+            arreglo2.push(paquete);
+            
         }
 
 
