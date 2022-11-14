@@ -1,8 +1,8 @@
 const Local = require("./Local");
 
 const Facturacion = require("./centros/Facturacion.js");
-const Calidad = require("../centros/Calidad");
-const Distribucion = require("../centros/Distribucion");
+const Calidad = require("./centros/Calidad");
+const Distribucion = require("./centros/Distribucion");
 const Paquete = require("./Paquete");
 function Tablero(){
     this.estado=[];
