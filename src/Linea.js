@@ -20,6 +20,7 @@ function Linea(nombreLocal,cantidad,nombreDestino){
         var col;
         for(col=0;col<3;col++){
             this.cambiarPosiciones(this.estado[col],this.estado[col+1]);
+            console.log("FINNNNNN");
 
         }
         this.llegaDestino(this.estado[3]);
@@ -47,22 +48,38 @@ function Linea(nombreLocal,cantidad,nombreDestino){
     //     return cont;
         
     // }
+
+    // this.cambiarPosiciones=function(arreglo1,arreglo2){
+    //     var paquete=new Paquete();
+    //     const maximo=arreglo2.length;
+    //     //const cantPaquetes=this.cantidadAnterior(arreglo1);
+    //     for(var i=0;i<maximo;i++){
+    //         if(arreglo1[i]!=undefined){
+    //             paquete=arreglo1[i];
+                
+    //             arreglo2[i]=paquete;
+    //             paquete.aumentarTiempo();
+    //             console.log("paquete %d %d",i,paquete.tiempo);
+    //         }
+            
+    //     }
+    // }
     this.cambiarPosiciones=function(arreglo1,arreglo2){
         var paquete=new Paquete();
         const maximo=arreglo2.length;
+
         //const cantPaquetes=this.cantidadAnterior(arreglo1);
-        for(var i=0;i<maximo;i++){
+        for(var i=maximo-1;i>=0;i--){
             if(arreglo1[i]!=undefined){
                 paquete=arreglo1[i];
-                arreglo2[i]=paquete;
+                
+                arreglo2.push(paquete);
                 paquete.aumentarTiempo();
+                arreglo1.pop(paquete);
+                //console.log("paquete %d %d",i,paquete.tiempo);
             }
             
-            
-            
         }
-
-
     }
 
 
