@@ -12,15 +12,15 @@ function Tablero(){
         const local=new Local(nombreLocal);
         local.insertarPaquete(cantidad);
         this.estado[0]=local.paquetesLocal;
-        this.estado[1]=new Array(Facturacion.maximoPaquetes);
-        this.estado[3]=new Array(Calidad.maximoPaquetes);
-        this.estado[4]=new Array(Distribucion.maximoPaquetes);
+        this.estado[1]= Facturacion.maximoPaquetes;
+        this.estado[3]= Calidad.maximoPaquetes;
+        this.estado[4]= Distribucion.maximoPaquetes;
 
     }
     this.moverPaquete=function(){
         var col ,centro;
         for(col=1;col<4;col++){
-            for(centro=0;centro<(this.estado[col]).length;col++){
+            for(centro=0;centro<this.estado[col].tamanio;col++){
                 this.cambiarPosiciones(this.estado[col-1],this.estado[col]);
                 
             }
