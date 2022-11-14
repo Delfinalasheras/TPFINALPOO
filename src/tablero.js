@@ -20,7 +20,7 @@ function Tablero(){
     }
     this.moverPaquete=function(){
         var col;
-        for(col=0;col<2;col++){
+        for(col=0;col<3;col++){
             this.cambiarPosiciones(this.estado[col],this.estado[col+1]);
 
         }
