@@ -1,5 +1,5 @@
 function Distribucion(){
-    this.maximoPaquetes=Array(10);
-    this.tamanio=this.maximoPaquetes.length;
+    this.maximoPaquetes=10;
+    
 }
 module.exports=Distribucion;
