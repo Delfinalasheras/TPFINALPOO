@@ -11,6 +11,13 @@ test("insertar paquete en local",()=>{
 
 
 })
+test("Armar Tablero",()=>{
+    const tablero=new Tablero();
+    tablero.crearTablero("A",3);
+    tablero[1][0]=new Paquete;
+    expect(tablero[1][0].getPaquete()).toBe("Paquete");
+    
+})
 test("Mover Paquetes",()=>{
     const tablero=new Tablero();
     tablero.crearTablero("A",3);
