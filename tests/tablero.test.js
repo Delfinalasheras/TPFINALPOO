@@ -30,9 +30,11 @@ test("Mover a Calidad Paquetes",()=>{
     tablero.crearTablero("A",3);
     tablero.moverPaquete();
     tablero.moverPaquete();
+    tablero.moverPaquete();
+
     expect(tablero.estado[2][0].getPaquete()).toBe("Paquete");
-    expect(tablero.estado[2][1].getPaquete()).toBe("Paquete");
-    expect(tablero.estado[2][2].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[1][1].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[1][2].getPaquete()).toBe("Paquete");
 
 
 })
