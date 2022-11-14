@@ -1,5 +1,5 @@
 function Calidad (){
-    this.maximoPaquetes=1;
+    this.maximoPaquetes=array(1);
         
 }
 

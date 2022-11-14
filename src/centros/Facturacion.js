@@ -1,5 +1,5 @@
 function Facturacion (){
-    this.maximoPaquetes=3;
+    this.maximoPaquetes=Array(3);
         
 }
 

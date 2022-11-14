@@ -1,4 +1,4 @@
 function Distribucion(){
-    this.maximoPaquetes=10;
+    this.maximoPaquetes=Array(10);
 }
 module.exports=Distribucion;
