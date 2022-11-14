@@ -12,38 +12,38 @@ function Tablero(){
         const local=new Local(nombreLocal);
         local.insertarPaquete(cantidad);
         this.estado[0]= local.paquetesLocal;
-        this.estado[1]= Array(Facturacion.maximoPaquetes);
-        this.estado[3]= Array(Calidad.maximoPaquetes);
-        this.estado[4]= Array(Distribucion.maximoPaquetes);
-        console.log("%d",this.estado[4].lenght);
-        //this.estado[4][0]=new Paquete();
+        this.estado[1]= Array(new Facturacion().maximoPaquetes);
+        this.estado[2]= Array(new Calidad().maximoPaquetes);
+        this.estado[3]= Array(new Distribucion().maximoPaquetes);
+        
 
     }
     this.moverPaquete=function(){
-        var col ,centro;
-        for(col=1;col<4;col++){
-            for(centro=0;centro<this.estado[col].lenght;col++){
-                this.cambiarPosiciones(this.estado[col-1],this.estado[col]);
-                
-            }
-        }
+        var col;
+        
+        this.cambiarPosiciones(this.estado[0],this.estado[1]);
     }
     this.cantidadAnterior=function(arregloant){
         var cont=0;
-        for(var i=0;i<arregloant.lenght;i++){
-            if(arregloant[i]!=null){
+        for(var i=0;i<arregloant.length;i++){
+            
+            if(arregloant[i]!=undefined){
                 cont++;
             }
         }
+        return cont;
+        
     }
     this.cambiarPosiciones=function(arreglo1,arreglo2){
         var paquete=new Paquete();
-        const maximo=arreglo2.lenght;
-        for(var i=0;i<maximo;i++){
+        const maximo=arreglo2.length;
+        const cantPaquetes=this.cantidadAnterior(arreglo1);
+        for(var i=0;i<maximo && i<cantPaquetes;i++){
+            
             paquete=arreglo1[i];
-            arreglo1.pop();
-            arreglo2.push(paquete);
-
+            arreglo2[i]=paquete;
+            
+            
         }
 
 
