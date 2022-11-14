@@ -23,6 +23,10 @@ test("Mover a Facturacion Paquetes",()=>{
     tablero.crearTablero("A",3);
     tablero.moverPaquete();
     expect(tablero.estado[1][0].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[1][1].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[1][2].getPaquete()).toBe("Paquete");
+
+
 
 })
 test("Mover a Calidad Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
