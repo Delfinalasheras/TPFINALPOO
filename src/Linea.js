@@ -4,12 +4,12 @@ const Facturacion = require("./centros/Facturacion");
 const Calidad = require("./centros/Calidad");
 const Distribucion = require("./centros/Distribucion");
 const Paquete = require("./Paquete");
-function Tablero(){
+function Linea(){
     this.estado=[];
     
 
     ///creo tablero por cada columna tiene su proprio arrray
-    this.crearTablero=function(nombreLocal,cantidad,nombreDestino){
+    this.crearLinea=function(nombreLocal,cantidad,nombreDestino){
         const local=new Local(nombreLocal);
         const destino=new Destino(nombreDestino);
         local.insertarPaquete(cantidad);
@@ -33,7 +33,9 @@ function Tablero(){
     this.llegaDestino=function(arrDistri){
         var i=0;
         for(i;i<arrDistri.length;i++){
-            
+            if(arrDistri[i]!=undefined){
+                this.destino
+            }
         }
     }
     // this.cantidadAnterior=function(arregloant){
@@ -68,4 +70,4 @@ function Tablero(){
 
     
 }
-module.exports=Tablero;
+module.exports=Linea;
