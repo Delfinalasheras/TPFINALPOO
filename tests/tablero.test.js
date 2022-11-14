@@ -55,7 +55,7 @@ test("LLEga Destino Paquetes",()=>{
     linea.moverPaquete();
     linea.moverPaquete();
     linea.moverPaquete();
-    expect(linea.estado[1][2].getPaquete()).toBe("Paquete");
+    expect(linea.estado[1][0].getPaquete()).toBe("Paquete");
     expect(linea.estado[2][0].getPaquete()).toBe("Paquete");
     expect(linea.destino.paquetes[0].getPaquete()).toBe("Paquete");
 
