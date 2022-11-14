@@ -11,10 +11,11 @@ function Tablero(){
     this.crearTablero=function(nombreLocal,cantidad){
         const local=new Local(nombreLocal);
         local.insertarPaquete(cantidad);
-        this.estado[0]=local.paquetesLocal;
+        this.estado[0]= local.paquetesLocal;
         this.estado[1]= Facturacion.maximoPaquetes;
         this.estado[3]= Calidad.maximoPaquetes;
         this.estado[4]= Distribucion.maximoPaquetes;
+        this.estado[4][0]=new Paquete();
 
     }
     this.moverPaquete=function(){
