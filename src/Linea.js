@@ -71,8 +71,9 @@ function Linea(nombreLocal,cantidad,nombreDestino){
         //const cantPaquetes=this.cantidadAnterior(arreglo1);
         for(var i=maximo-1;i>=0;i--){
             paquete=arreglo1[i];
-            arreglo2.push(paquete);
             paquete.aumentarTiempo();
+
+            arreglo2.push(paquete);
             arreglo1.pop();
                 //console.log("paquete %d %d",i,paquete.tiempo);
             }
