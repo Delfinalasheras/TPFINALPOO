@@ -25,17 +25,30 @@ test("Mover a Facturacion Paquetes",()=>{
     expect(tablero.estado[1][0].getPaquete()).toBe("Paquete");
 
 })
-test("Mover a Calidad Paquetes",()=>{
+test("Mover a Calidad Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
     const tablero=new Tablero();
     tablero.crearTablero("A",3);
     tablero.moverPaquete();
     tablero.moverPaquete();
     tablero.moverPaquete();
-
     expect(tablero.estado[2][0].getPaquete()).toBe("Paquete");
     expect(tablero.estado[1][1].getPaquete()).toBe("Paquete");
     expect(tablero.estado[1][2].getPaquete()).toBe("Paquete");
 
 
 })
+test("Mover a Distribucion Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
+    const tablero=new Tablero();
+    tablero.crearTablero("A",3);
+    tablero.moverPaquete();
+    tablero.moverPaquete();
+    tablero.moverPaquete();
+    tablero.moverPaquete();
+    expect(tablero.estado[1][2].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[2][0].getPaquete()).toBe("Paquete");
+    expect(tablero.estado[3][0].getPaquete()).toBe("Paquete");
+
+
+})
+
 
