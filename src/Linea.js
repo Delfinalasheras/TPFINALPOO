@@ -4,7 +4,7 @@ const Facturacion = require("./centros/Facturacion");
 const Calidad = require("./centros/Calidad");
 const Distribucion = require("./centros/Distribucion");
 const Paquete = require("./Paquete");
-function Linea(){
+function Linea(nombreLocal,cantidad,nombreDestino){
     this.estado=[];
     this.local=new Local(nombreLocal);
     this.cantidad;
