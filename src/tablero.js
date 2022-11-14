@@ -20,8 +20,10 @@ function Tablero(){
     }
     this.moverPaquete=function(){
         var col;
-        
-        this.cambiarPosiciones(this.estado[0],this.estado[1]);
+        for(col=0;col<2;col++){
+            this.cambiarPosiciones(this.estado[col],this.estado[col+1]);
+
+        }
     }
     this.cantidadAnterior=function(arregloant){
         var cont=0;
