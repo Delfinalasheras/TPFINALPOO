@@ -6,35 +6,33 @@ const Distribucion = require("./centros/Distribucion");
 const Paquete = require("./Paquete");
 function Linea(){
     this.estado=[];
-    
+    this.local=new Local(nombreLocal);
+    this.cantidad;
+    this.destino=new Destino(nombreDestino);
+    local.insertarPaquete(cantidad);
+    this.estado[0]= local.paquetesLocal;
+    this.estado[1]= Array(new Facturacion().maximoPaquetes);
+    this.estado[2]= Array(new Calidad().maximoPaquetes);
+    this.estado[3]= Array(new Distribucion().maximoPaquetes);
 
-    ///creo tablero por cada columna tiene su proprio arrray
-    this.crearLinea=function(nombreLocal,cantidad,nombreDestino){
-        const local=new Local(nombreLocal);
-        const destino=new Destino(nombreDestino);
-        local.insertarPaquete(cantidad);
-        this.estado[0]= local.paquetesLocal;
-        this.estado[1]= Array(new Facturacion().maximoPaquetes);
-        this.estado[2]= Array(new Calidad().maximoPaquetes);
-        this.estado[3]= Array(new Distribucion().maximoPaquetes);
         
-
-    }
     this.moverPaquete=function(){
         var col;
         for(col=0;col<3;col++){
             this.cambiarPosiciones(this.estado[col],this.estado[col+1]);
 
         }
+        this.llegaDestino(this.estado[3]);
         
         
         
     }
     this.llegaDestino=function(arrDistri){
-        var i=0;
-        for(i;i<arrDistri.length;i++){
+        var i=arrDistri.length-1;
+        for(i;i>=0;i--){
             if(arrDistri[i]!=undefined){
-                this.destino
+                this.destino.recibePaquete(arrDistri[i]);
+                arrDistri.pop();
             }
         }
     }

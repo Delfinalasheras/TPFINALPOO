@@ -54,5 +54,18 @@ test("Mover a Distribucion Paquetes",()=>{// se movio 1 solo paquete, por lo que
 
 
 })
+test("LLEga Destino Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
+    const linea=new Linea();
+    linea.crearLinea("A",3);
+    linea.moverPaquete();
+    linea.moverPaquete();
+    linea.moverPaquete();
+    linea.moverPaquete();
+    expect(linea.estado[1][2].getPaquete()).toBe("Paquete");
+    expect(linea.estado[2][0].getPaquete()).toBe("Paquete");
+    expect(linea.destino.paquetes[0].getPaquete()).toBe("Paquete");
+
+
+})
 
 
