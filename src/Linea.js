@@ -7,7 +7,7 @@ const Paquete = require("./Paquete");
 function Linea(nombreLocal,cantidad,nombreDestino){
     this.estado=[];
     this.local=new Local(nombreLocal);
-    this.cantidad;
+    this.cantidad=cantidad;
     this.destino=new Destino(nombreDestino);
     local.insertarPaquete(cantidad);
     this.estado[0]= local.paquetesLocal;
