@@ -13,14 +13,14 @@ test("insertar paquete en local",()=>{
 })
 test("Armar linea",()=>{
     const linea=new Linea();
-    linea.crearlinea("A",3);
+    linea.crearLinea("A",3);
     linea.estado[1][1]=new Paquete();
     expect(linea.estado[1][1].getPaquete()).toBe("Paquete");
     
 })
 test("Mover a Facturacion Paquetes",()=>{
     const linea=new Linea();
-    linea.crearlinea("A",3);
+    linea.crearLinea("A",3);
     linea.moverPaquete();
     expect(linea.estado[1][0].getPaquete()).toBe("Paquete");
     expect(linea.estado[1][1].getPaquete()).toBe("Paquete");
@@ -31,7 +31,7 @@ test("Mover a Facturacion Paquetes",()=>{
 })
 test("Mover a Calidad Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
     const linea=new Linea();
-    linea.crearlinea("A",3);
+    linea.crearLinea("A",3);
     linea.moverPaquete();
     linea.moverPaquete();
     linea.moverPaquete();
@@ -43,7 +43,7 @@ test("Mover a Calidad Paquetes",()=>{// se movio 1 solo paquete, por lo que los 
 })
 test("Mover a Distribucion Paquetes",()=>{// se movio 1 solo paquete, por lo que los otros dos quedaron en la cola del local
     const linea=new Linea();
-    linea.crearlinea("A",3);
+    linea.crearLinea("A",3);
     linea.moverPaquete();
     linea.moverPaquete();
     linea.moverPaquete();
