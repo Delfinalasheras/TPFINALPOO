@@ -1,7 +1,5 @@
 function Facturacion (){
-    this.maximoPaquetes=Array(3);
-    this.tamanio=this.maximoPaquetes.length;
-        
+    this.maximoPaquetes=3;
 }
 
 module.exports=Facturacion;

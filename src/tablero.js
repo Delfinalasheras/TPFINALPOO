@@ -12,8 +12,8 @@ function Tablero(){
         const local=new Local(nombreLocal);
         local.insertarPaquete(cantidad);
         this.estado[0]= local.paquetesLocal;
-        this.estado[1]= Facturacion.maximoPaquetes;
-        this.estado[3]= Calidad.maximoPaquetes;
+        this.estado[1]= Array(Facturacion.maximoPaquetes);
+        this.estado[3]= Array(Calidad.maximoPaquetes);
         this.estado[4]= Array(Distribucion.maximoPaquetes);
         this.estado[4][0]=new Paquete();
 
