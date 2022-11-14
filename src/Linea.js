@@ -9,7 +9,7 @@ function Linea(nombreLocal,cantidad,nombreDestino){
     this.local=new Local(nombreLocal);
     this.cantidad=cantidad;
     this.destino=new Destino(nombreDestino);
-    local.insertarPaquete(cantidad);
+    this.local.insertarPaquete(cantidad);
     this.estado[0]= local.paquetesLocal;
     this.estado[1]= Array(new Facturacion().maximoPaquetes);
     this.estado[2]= Array(new Calidad().maximoPaquetes);
